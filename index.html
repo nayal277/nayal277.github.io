@@ -1,10 +1,169 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Personal Website</title>
-  </head>
-  <body>
-    <h1>Welcome to my site!</h1>
-    <p>This site was made with GitHub Pages and my Student Pack.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nayal277.me – Welcome!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal homepage for Nayal277">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #181c24 0%, #2d3748 100%);
+      color: #f3f4f6;
+      font-family: 'Montserrat', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: rgba(36, 42, 56, 0.96);
+      border-radius: 24px;
+      padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+      box-shadow: 0 10px 42px 0 rgba(94,234,212,0.10), 0 2px 4px rgba(0,0,0,0.10);
+      text-align: center;
+      max-width: 425px;
+      width: 100%;
+      transition: box-shadow 0.2s;
+      position: relative;
+    }
+    .container::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 24px;
+      pointer-events: none;
+      box-shadow: 0 0 0 2px #5eead4 inset;
+      opacity: 0.07;
+    }
+    .avatar {
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      border: 4px solid #5eead4;
+      margin-bottom: 1.3rem;
+      object-fit: cover;
+      background: #444;
+      box-shadow: 0 1px 8px #222a;
+      transition: transform 0.2s;
+    }
+    .avatar:hover {
+      transform: rotate(4deg) scale(1.05);
+    }
+    h1 {
+      margin: 0 0 0.25em 0;
+      font-weight: 700;
+      font-size: 2.3rem;
+      letter-spacing: 1.2px;
+      color: #5eead4;
+      text-shadow: 0 2px 12px #5eead455;
+    }
+    .bio {
+      color: #a1a1aa;
+      margin: 0 0 1.7em 0;
+      font-size: 1.13rem;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+    .tags {
+      margin: 0 0 1.2em 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5em;
+    }
+    .tag {
+      background: #21293a;
+      color: #5eead4;
+      border-radius: 7px;
+      padding: 0.2em 0.95em;
+      font-size: 0.97em;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      border: 1px solid #313b52;
+      transition: background 0.2s;
+    }
+    .tag:hover {
+      background: #232e3e;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 1.3em;
+      margin-bottom: 1.8em;
+    }
+    .links a {
+      color: #5eead4;
+      text-decoration: none;
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      transition: color 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
+    }
+    .links a:hover {
+      color: #fff;
+      border-bottom: 2px solid #5eead4;
+    }
+    .contact-btn {
+      background: #5eead4;
+      color: #23272f;
+      border: none;
+      border-radius: 8px;
+      padding: 0.8em 2.2em;
+      font-size: 1.18rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 16px #5eead422;
+      margin-top: 0.5em;
+    }
+    .contact-btn:hover {
+      background: #fff;
+      color: #5eead4;
+    }
+    @media (max-width: 500px) {
+      .container {
+        padding: 1.3rem 0.5rem 1.8rem 0.5rem;
+      }
+      .avatar {
+        width: 82px;
+        height: 82px;
+      }
+      h1 {
+        font-size: 1.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/14421588" alt="Avatar">
+    <h1>Nayal277</h1>
+    <div class="bio">
+      Hey there! 👋<br>
+      I'm <b>Nayal277</b> – coder, creator, and always curious.<br>
+      Building the web, learning new things, and making cool stuff.<br>
+      <span style="font-size:0.96em;color:#5eead4;">nayal277.me – your new favorite place on the internet :)</span>
+    </div>
+    <div class="tags">
+      <span class="tag">Web Dev</span>
+      <span class="tag">Open Source</span>
+      <span class="tag">Creativity</span>
+      <span class="tag">.me domain 🚀</span>
+    </div>
+    <div class="links">
+      <a href="https://github.com/nayal277" title="GitHub" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.instagram.com/" title="Instagram" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:your@email.com" title="Email">Email</a>
+    </div>
+    <a href="mailto:your@email.com">
+      <button class="contact-btn">Contact Me</button>
+    </a>
+  </div>
+</body>
 </html>
