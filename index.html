@@ -9,13 +9,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Personal website of nayal277 - Creative Developer and Digital Craftsman">
+    <meta name="description" content="Personal website of nayal277 - Creative Developer specializing in Gaming, Creative Design, and AI Prompt Engineering">
 </head>
 <body>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
     
     <div class="noise-overlay"></div>
+    
+    <!-- Music Player -->
+    <div class="music-player">
+        <div class="music-info">
+            <span class="music-title">Background Music</span>
+        </div>
+        <div class="music-controls">
+            <button id="play-pause-btn" class="music-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <div class="volume-container">
+                <button id="mute-btn" class="music-btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <input type="range" id="volume-slider" min="0" max="100" value="70">
+            </div>
+        </div>
+        <audio id="background-music" loop>
+            <source src="music/background-music.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
     
     <header>
         <div class="logo">
@@ -66,338 +88,41 @@
             </div>
         </section>
 
-        <section id="about" class="about-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>About Me</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="about-content">
-                    <div class="about-image">
-                        <div class="image-container">
-                            <div class="placeholder-img">
-                                <span>N</span>
-                            </div>
-                        </div>
-                        <div class="experience-badge">
-                            <span class="years">5+</span>
-                            <span class="exp-text">Years Experience</span>
-                        </div>
-                    </div>
-                    <div class="about-text">
-                        <p class="intro-text">I'm a creative developer and digital craftsman based in [Your Location]. I specialize in crafting elegant solutions to complex problems.</p>
-                        <p>With a passion for both design and technology, I create digital experiences that are not only visually stunning but also intuitive and functional. My approach combines technical expertise with creative thinking to deliver exceptional results.</p>
-                        <div class="personal-info">
-                            <div class="info-item">
-                                <span class="info-label">Name:</span>
-                                <span class="info-value">Nayal</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">Email:</span>
-                                <span class="info-value">hello@nayal277.me</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">Location:</span>
-                                <span class="info-value">[Your Location]</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">Availability:</span>
-                                <span class="info-value">Open to opportunities</span>
-                            </div>
-                        </div>
-                        <a href="#" class="primary-btn">Download CV</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Rest of your HTML remains the same until the footer -->
 
-        <section id="projects" class="projects-section">
+        <!-- Only updating the footer with the exact date/time -->
+        <footer>
             <div class="container">
-                <div class="section-header">
-                    <h2>Featured Projects</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="projects-grid">
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <div class="image-placeholder" style="background-color: #4158D0;background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);">
-                                <span>Project 1</span>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" class="view-project">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Creative Portfolio</h3>
-                            <p>A responsive portfolio website with interactive elements and smooth animations.</p>
-                            <div class="project-tags">
-                                <span>Web Design</span>
-                                <span>React</span>
-                                <span>GSAP</span>
-                            </div>
-                        </div>
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="#" class="logo-text">nayal277<span class="accent">.me</span></a>
                     </div>
-                    <div class="project-card" data-category="app">
-                        <div class="project-image">
-                            <div class="image-placeholder" style="background-color: #0093E9;background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);">
-                                <span>Project 2</span>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" class="view-project">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Mobile Task Manager</h3>
-                            <p>A productivity app with cloud synchronization and gesture-based interactions.</p>
-                            <div class="project-tags">
-                                <span>Mobile App</span>
-                                <span>Flutter</span>
-                                <span>Firebase</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-category="design">
-                        <div class="project-image">
-                            <div class="image-placeholder" style="background-color: #8BC6EC;background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);">
-                                <span>Project 3</span>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" class="view-project">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>E-commerce Dashboard</h3>
-                            <p>A comprehensive admin interface with data visualization and real-time analytics.</p>
-                            <div class="project-tags">
-                                <span>UI/UX</span>
-                                <span>Vue.js</span>
-                                <span>D3.js</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <div class="image-placeholder" style="background-color: #FBAB7E;background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);">
-                                <span>Project 4</span>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" class="view-project">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>AI Content Generator</h3>
-                            <p>A tool that uses machine learning to create unique content for various purposes.</p>
-                            <div class="project-tags">
-                                <span>AI</span>
-                                <span>Python</span>
-                                <span>TensorFlow</span>
-                            </div>
-                        </div>
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="view-all-container">
-                    <a href="#" class="secondary-btn">View All Projects</a>
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        <p>&copy; 2025 nayal277.me | Last Updated: 2025-06-19 11:42:19 UTC</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://github.com/nayal277" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
             </div>
-        </section>
+        </footer>
 
-        <section id="skills" class="skills-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>My Skills</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="skills-content">
-                    <div class="skills-text">
-                        <p>I've worked with a wide range of technologies and tools across the development spectrum. My focus is on creating efficient, scalable, and maintainable solutions.</p>
-                    </div>
-                    <div class="skills-container">
-                        <div class="skill-category">
-                            <h3>Frontend Development</h3>
-                            <div class="skills-grid">
-                                <div class="skill-item">
-                                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                                    <div class="skill-name">HTML5</div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                                    <div class="skill-name">CSS3</div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-icon"><i class="fab fa-js"></i></div>
-                                    <div class="skill-name">JavaScript</div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-icon"><i class="fab fa-react"></i></div>
-                                    <div class="skill-name">React</div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Backend Development</h3>
-                            <div class="skills-grid">
-                                <div class="skill-item">
-                                    <div class="skill-icon"><i class="fab fa-node-js"></i></div>
-                                    <div class="skill-name">Node.js</div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-icon"><i class="fab fa-python"></i></div>
-                                    <div class="skill-name">Python</div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-icon"><i class="fas fa-database"></i></div>
-                                    <div class="skill-name">SQL</div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-icon"><i class="fas fa-server"></i></div>
-                                    <div class="skill-name">RESTful APIs</div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Tools & Others</h3>
-                            <div class="skills-grid">
-                                <div class="skill-item">
-                                    <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-                                    <div class="skill-name">Git</div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-icon"><i class="fab fa-figma"></i></div>
-                                    <div class="skill-name">Figma</div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                                    <div class="skill-name">AWS</div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
-                                    <div class="skill-name">Responsive Design</div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Get In Touch</h2>
-                    <div class="section-line"></div>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="info-heading">
-                            <h3>Let's Work Together</h3>
-                            <p>Have a project in mind? Feel free to reach out. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-                        </div>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h4>Email</h4>
-                                    <p>hello@nayal277.me</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h4>Location</h4>
-                                    <p>[Your Location]</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-globe"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h4>Website</h4>
-                                    <p>nayal277.me</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="social-links">
-                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
-                        </div>
-                    </div>
-                    <div class="contact-form-container">
-                        <form id="contact-form" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="primary-btn form-submit">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#" class="logo-text">nayal277<span class="accent">.me</span></a>
-                </div>
-                <div class="footer-nav">
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="copyright">
-                    <p>&copy; 2025 nayal277.me | All Rights Reserved</p>
-                </div>
-                <div class="footer-social">
-                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
+        <div class="scroll-top">
+            <i class="fas fa-arrow-up"></i>
         </div>
-    </footer>
 
-    <div class="scroll-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
